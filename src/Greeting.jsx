@@ -15,4 +15,13 @@ function EmailInput() {
   );
 }
 
-export { NamedSample, EmailInput };
+function App2() {
+  return (
+    <div>
+      <h1>Inside h1</h1>
+      <h2>Inside h2</h2>
+    </div>
+  );
+}
+
+export { NamedSample, EmailInput, App2 };
