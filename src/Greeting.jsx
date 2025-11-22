@@ -15,12 +15,13 @@ function EmailInput() {
   );
 }
 
-function App2() {
-  const savior = "Jesus Christ";
+function App2(props) {
+  // const savior = "Jesus Christ";
 
   return (
     <div style={{ backgroundColor: "green" }}>
-      <h1>Our savior, {savior}.</h1>
+      <h1>Our savior, {props.name}.</h1>
+      <h1>Our father, {props.father}.</h1>
     </div>
   );
 }
