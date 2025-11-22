@@ -16,10 +16,11 @@ function EmailInput() {
 }
 
 function App2() {
+  const savior = "Jesus Christ";
+
   return (
-    <div>
-      <h1>Inside h1</h1>
-      <h2>Inside h2</h2>
+    <div style={{ backgroundColor: "green" }}>
+      <h1>Our savior, {savior}.</h1>
     </div>
   );
 }
