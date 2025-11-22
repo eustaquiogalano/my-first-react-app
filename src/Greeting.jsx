@@ -30,6 +30,7 @@ function App2(props) {
 
 function App3() {
   const names = ["Peter", "Luke", "John", "Mathew", "Mark"];
+  // const namesNone = [];
 
   return (
     <>

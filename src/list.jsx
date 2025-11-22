@@ -3,6 +3,21 @@ function ListItem(props) {
 }
 
 function List(props) {
+  if (!props.names) {
+    return (
+      <div>
+        <p>Loading....</p>
+      </div>
+    );
+  }
+
+  if (props.names.length === 0) {
+    return (
+      <div>
+        <p>The list is empty.</p>
+      </div>
+    );
+  }
   return (
     <ul>
       {props.names.map((name) => {
