@@ -1,3 +1,5 @@
+import { List } from "./list";
+
 export default function Pagbati() {
   return <button>&qout;Pagbati mula sa Pilipinas at sa mundo&qout;</button>;
 }
@@ -26,4 +28,14 @@ function App2(props) {
   );
 }
 
-export { NamedSample, EmailInput, App2 };
+function App3() {
+  const names = ["Peter", "Luke", "John", "Mathew"];
+
+  return (
+    <>
+      <List names={names} />
+    </>
+  );
+}
+
+export { NamedSample, EmailInput, App2, App3 };
