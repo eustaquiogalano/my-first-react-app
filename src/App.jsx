@@ -1,35 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css";
+import { Button } from "./components/Buttons";
+import { App2, App3 } from "./components/Greeting";
+import { ListOfProfessionals } from "./components/RenderList";
+import { ScientistList } from "./components/RenderList";
+import { BookList } from "./components/gospelList";
+import { ColorPicker } from "./components/ColorPicker";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Button />
+      <Button text="Dont Click Me" color="red" />
+      <Button text="Look at Me" fontSize={30} />
+      <App2 name="Jesus Christ" father="God" />
+      <App3 />
+      <BookList />
+      <ListOfProfessionals />
+      <ScientistList />
+      <ColorPicker />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
