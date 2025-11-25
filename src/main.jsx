@@ -7,11 +7,14 @@ import {
   EmailInput,
   App2,
   App3,
-} from "./Greeting.jsx";
+} from "./components/Greeting.jsx";
 import App from "./App.jsx";
-import { BookList } from "./gospelList.jsx";
-import { ListOfProfessionals, ScientistList } from "./RenderList.jsx";
-import { Button } from "./Buttons.jsx";
+import { BookList } from "./components/gospelList.jsx";
+import {
+  ListOfProfessionals,
+  ScientistList,
+} from "./components/RenderList.jsx";
+import { Button } from "./components/Buttons.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
