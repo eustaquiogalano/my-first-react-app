@@ -11,9 +11,13 @@ import {
 import App from "./App.jsx";
 import { BookList } from "./gospelList.jsx";
 import { ListOfProfessionals, ScientistList } from "./RenderList.jsx";
+import { Button } from "./Buttons.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+    <Button />
+    <Button text="Dont Click Me" color="red" />
+    <Button text="Look at Me" fontSize={30} />
     <App2 name="Jesus Christ" father="God" />
     <App3 />
     <BookList />
