@@ -3,7 +3,7 @@ import { useState } from "react";
 const COLORS = ["pink", "green", "blue", "yellow", "purple"];
 
 function ColorPicker() {
-  const [backgroundColor, setBackgroundColor] = useState(COLORS[0]);
+  const [backgroundColor, setBackgroundColor] = useState("white");
 
   // higher-order function - function that returns a function
   function onButtonClick(color) {
@@ -12,6 +12,7 @@ function ColorPicker() {
       document.body.style.backgroundColor = color;
     };
   }
+
   return (
     <div style={{ backgroundColor }}>
       {COLORS.map((color) => {
