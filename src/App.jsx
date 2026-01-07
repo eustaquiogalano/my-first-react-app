@@ -1,11 +1,10 @@
 import "./App.css";
-import ChatSection from "./components/ChatSection/ChatSection";
-import MouseCirclePointer from "./components/MouseCirclePointer/MouseCirclePointer";
+import Todo from "./components/Todo/Todo";
 
 function App() {
   return (
     <>
-      <MouseCirclePointer />
+      <Todo />
     </>
   );
 }
