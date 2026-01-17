@@ -39,6 +39,14 @@ function MouseCirclePointer() {
           height: 10,
         }}
       />
+      <div>
+        <ul className="apostles">
+          <li>Peter</li>
+          <li>Mark</li>
+          <li>James</li>
+          <li>Luke</li>
+        </ul>
+      </div>
     </>
   );
 }
