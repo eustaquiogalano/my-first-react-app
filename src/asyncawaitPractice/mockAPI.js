@@ -10,3 +10,10 @@ export async function getAllUsers() {
 
   return mockDatabase;
 }
+
+export async function addUser(user) {
+  await mockDelay();
+
+  mockDatabase.push(user);
+  return mockDatabase;
+}
