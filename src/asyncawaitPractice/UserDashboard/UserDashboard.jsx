@@ -21,6 +21,8 @@ export default function UserDashboard() {
     } catch (error) {
       console.error(error);
     }
+
+    handleGetUsers();
   }
 
   return (
