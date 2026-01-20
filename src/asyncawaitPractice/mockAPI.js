@@ -5,7 +5,7 @@ function mockDelay() {
   return new Promise((resolve) => setTimeout(resolve, 1000));
 }
 
-export async function getUsers() {
+export async function getAllUsers() {
   await mockDelay(); // network delay
 
   return mockDatabase;
