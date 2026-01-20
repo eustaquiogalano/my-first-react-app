@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { getAllUsers, addUser } from "../mockAPI";
+import { getAllUsers, addUser, deleteUser, updateUser } from "../mockAPI";
 
 export default function UserDashboard() {
-  const [userList, setUserList] = useState([{ name: "Jesus" }]);
+  const [userList, setUserList] = useState([]);
   const [name, setName] = useState("");
 
   async function handleGetUsers() {
@@ -25,13 +25,47 @@ export default function UserDashboard() {
     handleGetUsers();
   }
 
+  async function handleDeleteUser(name) {
+    try {
+      const result = await deleteUser(name);
+      console.log(result);
+    } catch (error) {
+      console.error(error);
+    }
+
+    handleGetUsers();
+  }
+
+  async function handleUpdateUser(selectedUser, updatedUser) {
+    try {
+      const result = await updateUser(selectedUser, updatedUser);
+      console.log(result);
+    } catch (error) {
+      console.error(error);
+    }
+
+    handleGetUsers();
+  }
+
   return (
     <section>
       <div>
         <button onClick={handleGetUsers}>Get all users</button>
         <ul>
           {userList.map((user) => {
-            return <li>{user.name}</li>;
+            return (
+              <li>
+                {user.name}{" "}
+                <button onClick={() => handleDeleteUser(user.name)}>
+                  Delete
+                </button>
+                <button
+                  onClick={() => handleUpdateUser(user, { name: "Jesus" })}
+                >
+                  Update user
+                </button>
+              </li>
+            );
           })}
         </ul>
       </div>
