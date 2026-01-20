@@ -8,7 +8,7 @@ export default function UserDashboard() {
   async function handleGetUsers() {
     try {
       const result = await getAllUsers();
-      setUserList([...userList, ...result]);
+      setUserList([...result]);
     } catch (error) {
       console.error(error);
     }
