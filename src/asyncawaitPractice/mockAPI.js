@@ -131,5 +131,3 @@ export async function updateUser(selectedUser, updatedUser) {
 
   return mockDatabase;
 }
-
-// fix the bug list is not getting updated
