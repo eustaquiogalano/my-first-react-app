@@ -52,21 +52,25 @@ export default function UserDashboard() {
       <div>
         <button onClick={handleGetUsers}>Get all users</button>
         <ul>
-          {userList.map((user) => {
-            return (
-              <li>
-                {user.name}{" "}
-                <button onClick={() => handleDeleteUser(user.name)}>
-                  Delete
-                </button>
-                <button
-                  onClick={() => handleUpdateUser(user, { name: "Jesus" })}
-                >
-                  Update user
-                </button>
-              </li>
-            );
-          })}
+          {userList.length > 0 ? (
+            userList.map((user) => {
+              return (
+                <li>
+                  {user.name}{" "}
+                  <button onClick={() => handleDeleteUser(user.name)}>
+                    Delete
+                  </button>
+                  <button
+                    onClick={() => handleUpdateUser(user, { name: "Jesus" })}
+                  >
+                    Update user
+                  </button>
+                </li>
+              );
+            })
+          ) : (
+            <p>loading...</p>
+          )}
         </ul>
       </div>
       <div>
