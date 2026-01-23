@@ -1,4 +1,8 @@
+// This is a practice file for simulating user interaction
+// this component is used only for testing
+
 import { useState } from "react";
+import CountDisplay from "../CounDisplay/CountDisplay";
 
 function DigitCounter() {
   const [count, setCount] = useState(0);
@@ -13,7 +17,7 @@ function DigitCounter() {
 
   return (
     <div>
-      <h2 data-testid="count">{count}</h2>
+      <CountDisplay count={count} />
       <button onClick={handleDecrement}>Decrement</button>
       <button onClick={handleIncrement}>Increment</button>
     </div>

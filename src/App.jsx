@@ -1,11 +1,10 @@
 import "./App.css";
-import MouseCirclePointer from "./components/MouseCirclePointer/MouseCirclePointer";
-import Todo from "./components/Todo/Todo";
+import DigitCounter from "./components/SimulateUserInteraction/DigitCounter/DigitCounter";
 
 function App() {
   return (
     <>
-      <MouseCirclePointer></MouseCirclePointer>
+      <DigitCounter />
     </>
   );
 }
