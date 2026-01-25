@@ -12,13 +12,8 @@ import ErrorPage from "./components/ClientSideRouting/ErrorPage.jsx";
 const router = createBrowserRouter([
   { path: "/", element: <CSRApp />, errorElement: <ErrorPage /> },
   {
-    path: "profile",
+    path: "profile/:name",
     element: <Profile />,
-    children: [
-      { index: true, element: <DefaultProfilePage /> },
-      { path: "friends", element: <Friends /> },
-      { path: "about", element: <About /> },
-    ],
   },
 ]);
 
