@@ -7,9 +7,10 @@ import Profile from "./components/ClientSideRouting/Profile.jsx";
 import Friends from "./components/ClientSideRouting/ProfileChildrenComponents/Friends.jsx";
 import About from "./components/ClientSideRouting/ProfileChildrenComponents/About.jsx";
 import DefaultProfilePage from "./components/ClientSideRouting/ProfileChildrenComponents/DefaultProfilePage.jsx";
+import ErrorPage from "./components/ClientSideRouting/ErrorPage.jsx";
 
 const router = createBrowserRouter([
-  { path: "/", element: <CSRApp /> },
+  { path: "/", element: <CSRApp />, errorElement: <ErrorPage /> },
   {
     path: "profile",
     element: <Profile />,
