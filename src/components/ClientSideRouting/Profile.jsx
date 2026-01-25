@@ -1,13 +1,21 @@
-import { Link, Outlet } from "react-router";
+import { Link, Outlet, useParams } from "react-router";
+import Friends from "./ProfileChildrenComponents/Friends";
+import About from "./ProfileChildrenComponents/About";
+import DefaultProfilePage from "./ProfileChildrenComponents/DefaultProfilePage";
 
 function Profile() {
+  const { name } = useParams();
+
   return (
     <div>
       <h1>Profile Page</h1>
-      <nav>
-        <Link to="/">Back to Main Page</Link>
-        <Outlet />
-      </nav>
+      {name === "friends" ? (
+        <Friends />
+      ) : name === "about" ? (
+        <About />
+      ) : (
+        <DefaultProfilePage />
+      )}
     </div>
   );
 }
