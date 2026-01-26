@@ -1,4 +1,4 @@
-import { Outlet } from "react-router";
+import { Link, Outlet } from "react-router";
 
 function ContactsApp() {
   return (
@@ -24,10 +24,10 @@ function ContactsApp() {
         <nav>
           <ul>
             <li>
-              <a href={`/contacts/1`}>Your Name</a>
+              <Link to={"contacts/1"}>Your name</Link>
             </li>
             <li>
-              <a href={`/contacts/2`}>Your Friend</a>
+              <Link to={"contacts/2"}>Your Friend</Link>
             </li>
           </ul>
         </nav>
