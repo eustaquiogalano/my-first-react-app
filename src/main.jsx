@@ -5,7 +5,13 @@ import "././components/CSRContactsPractice/ContactsApp.css";
 import ContactsApp from "./components/CSRContactsPractice/ContactsApp";
 import ContactsErrorPage from "./components/CSRContactsPractice/ContactsErrorPage";
 
-const router = createBrowserRouter(routes);
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <ContactsApp />,
+    errorElement: <ContactsErrorPage />,
+  },
+]);
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
