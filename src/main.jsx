@@ -7,7 +7,9 @@ import ContactsApp, {
   action as rootAction,
 } from "./components/CSRContactsPractice/ContactsApp";
 import ContactsErrorPage from "./components/CSRContactsPractice/ContactsErrorPage";
-import ContactCard from "./components/CSRContactsPractice/ContactsCard";
+import ContactCard, {
+  loader as contactLoader,
+} from "./components/CSRContactsPractice/ContactsCard";
 
 const router = createBrowserRouter([
   {
@@ -24,6 +26,7 @@ const router = createBrowserRouter([
       {
         path: "contacts/:contactID",
         element: <ContactCard />,
+        loader: contactLoader,
       },
     ],
   },
