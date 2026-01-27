@@ -1,9 +1,14 @@
-import { Link, Outlet, useLoaderData } from "react-router";
-import { getContacts } from "./ContactsUtil";
+import { Link, Outlet, useLoaderData, Form } from "react-router";
+import { createContact, getContacts } from "./ContactsUtil";
 
 export async function loader() {
   const contacts = await getContacts();
   return { contacts };
+}
+
+export async function action() {
+  const contact = await createContact();
+  return { contact };
 }
 
 function ContactsApp() {
@@ -25,9 +30,9 @@ function ContactsApp() {
             <div id="search-spinner" aria-hidden hidden={true} />
             <div className="sr-only" aria-live="polite"></div>
           </form>
-          <form method="post">
+          <Form method="post">
             <button type="submit">New</button>
-          </form>
+          </Form>
         </div>
         <nav>
           {contacts.length ? (
