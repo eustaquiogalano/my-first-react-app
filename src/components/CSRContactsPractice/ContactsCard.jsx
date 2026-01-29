@@ -49,7 +49,7 @@ function ContactCard() {
           </Form>
           <Form
             method="post"
-            action="destroy"
+            action="delete"
             onSubmit={(event) => {
               if (!confirm("Please confirm you want to delete this record.")) {
                 event.preventDefault();

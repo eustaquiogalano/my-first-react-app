@@ -13,6 +13,7 @@ import ContactCard, {
 import ContactsEdit, {
   action as editAction,
 } from "./components/CSRContactsPractice/ContactsEdit";
+import { action as deleteAction } from "./components/CSRContactsPractice/ContactsDelete";
 
 const router = createBrowserRouter([
   {
@@ -36,6 +37,10 @@ const router = createBrowserRouter([
         element: <ContactsEdit />,
         loader: contactLoader,
         action: editAction,
+      },
+      {
+        path: "contacts/:contactID/delete",
+        action: deleteAction,
       },
     ],
   },
