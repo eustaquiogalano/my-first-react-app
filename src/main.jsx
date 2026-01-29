@@ -14,6 +14,9 @@ import ContactsEdit, {
   action as editAction,
 } from "./components/CSRContactsPractice/ContactsEdit";
 import { action as deleteAction } from "./components/CSRContactsPractice/ContactsDelete";
+import ContactsIndex, {
+  loader as indexLoader,
+} from "./components/CSRContactsPractice/ContactsIndex";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +31,11 @@ const router = createBrowserRouter([
     // like form submissions and side effects
     action: rootAction,
     children: [
+      {
+        index: true,
+        element: <ContactsIndex />,
+        loader: indexLoader,
+      },
       {
         path: "contacts/:contactID",
         element: <ContactCard />,
