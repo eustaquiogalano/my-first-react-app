@@ -19,6 +19,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <ContactsApp />,
+    // errorElement handles the error of the page
     errorElement: <ContactsErrorPage />,
     // loader gets your stuff ready before
     // the page shows up
