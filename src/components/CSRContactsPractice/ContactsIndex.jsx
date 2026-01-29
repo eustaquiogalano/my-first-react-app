@@ -8,7 +8,6 @@ export async function loader() {
 
 export default function ContactsIndex() {
   const { contacts } = useLoaderData();
-  console.log(contacts);
 
   return (
     // <p id="zero-state">
