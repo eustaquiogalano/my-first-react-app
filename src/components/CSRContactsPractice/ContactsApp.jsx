@@ -8,16 +8,13 @@ import {
   useNavigation,
 } from "react-router";
 import { createContact, getContacts } from "./ContactsUtil";
+import { useEffect } from "react";
 
 export async function loader({ request }) {
   const url = new URL(request.url);
   const q = url.searchParams.get("q");
   const contacts = await getContacts(q);
-
-  console.log(request);
-  console.log(url);
-
-  return { contacts };
+  return { contacts, q };
 }
 
 export async function action() {
@@ -26,8 +23,12 @@ export async function action() {
 }
 
 function ContactsApp() {
-  const { contacts } = useLoaderData();
+  const { contacts, q } = useLoaderData();
   const navigation = useNavigation();
+
+  useEffect(() => {
+    document.getElementById("q").value = q;
+  }, [q]);
 
   return (
     <>
@@ -41,6 +42,7 @@ function ContactsApp() {
               placeholder="Search"
               type="search"
               name="q"
+              defaultValue={q}
             />
             <div id="search-spinner" aria-hidden hidden={true} />
             <div className="sr-only" aria-live="polite"></div>
