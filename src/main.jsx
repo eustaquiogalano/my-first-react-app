@@ -9,6 +9,7 @@ import ContactsApp, {
 import ContactsErrorPage from "./components/CSRContactsPractice/ContactsErrorPage";
 import ContactCard, {
   loader as contactLoader,
+  action as contactAction,
 } from "./components/CSRContactsPractice/ContactsCard";
 import ContactsEdit, {
   action as editAction,
@@ -40,6 +41,7 @@ const router = createBrowserRouter([
         path: "contacts/:contactID",
         element: <ContactCard />,
         loader: contactLoader,
+        action: contactAction,
       },
       {
         path: "contacts/:contactID/edit",
