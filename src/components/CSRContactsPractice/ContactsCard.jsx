@@ -3,6 +3,12 @@ import { getContact, updateContact } from "./ContactsUtil";
 
 export async function loader({ params }) {
   const contact = await getContact(params.contactID);
+  if (!contact) {
+    throw new Response("", {
+      status: 404,
+      statusText: "Hindi Makita",
+    });
+  }
   return { contact };
 }
 
