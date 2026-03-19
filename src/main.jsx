@@ -18,6 +18,7 @@ import { action as deleteAction } from "./components/CSRContactsPractice/Contact
 import ContactsIndex, {
   loader as indexLoader,
 } from "./components/CSRContactsPractice/ContactsIndex";
+import App from "./App";
 
 const router = createBrowserRouter([
   {
@@ -65,6 +66,7 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    {/* <RouterProvider router={router} /> */}
+    <App></App>
   </StrictMode>
 );

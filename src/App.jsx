@@ -1,10 +1,10 @@
 import "./App.css";
-import DigitCounter from "./components/SimulateUserInteraction/DigitCounter/DigitCounter";
+import SCApp from "./components/styledComponents/SCApp";
 
 function App() {
   return (
     <>
-      <DigitCounter />
+      <SCApp></SCApp>
     </>
   );
 }
