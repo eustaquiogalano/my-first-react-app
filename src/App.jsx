@@ -1,10 +1,10 @@
 import "./App.css";
-import SCApp from "./components/styledComponents/SCApp";
+import Counter from "./components/ReducerCounter/Counter";
 
 function App() {
   return (
     <>
-      <SCApp></SCApp>
+      <Counter />
     </>
   );
 }
