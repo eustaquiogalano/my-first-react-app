@@ -1,10 +1,13 @@
+import { ChakraProvider } from "@chakra-ui/react";
 import "./App.css";
-import Counter from "./components/ReducerCounter/Counter";
+import Cart from "./components/ReducerCart/Cart";
 
 function App() {
   return (
     <>
-      <Counter />
+      <ChakraProvider>
+        <Cart />
+      </ChakraProvider>
     </>
   );
 }

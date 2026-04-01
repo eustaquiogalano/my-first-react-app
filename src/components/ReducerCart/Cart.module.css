@@ -1,0 +1,11 @@
+.cart {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.cart > div {
+  border: 1px solid black;
+}
