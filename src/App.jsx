@@ -1,13 +1,10 @@
-import { ChakraProvider } from "@chakra-ui/react";
 import "./App.css";
-import Cart from "./components/ReducerCart/Cart";
+import Timer from "./components/refNmemoization/Timer";
 
 function App() {
   return (
     <>
-      <ChakraProvider>
-        <Cart />
-      </ChakraProvider>
+      <Timer />
     </>
   );
 }
