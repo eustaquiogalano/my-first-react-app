@@ -1,10 +1,10 @@
 import "./App.css";
-import Timer from "./components/refNmemoization/Timer";
+import MovingButton from "./components/refNmemoization/movingButton/MovingButton";
 
 function App() {
   return (
     <>
-      <Timer />
+      <MovingButton />
     </>
   );
 }
